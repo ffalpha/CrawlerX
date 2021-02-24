@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import firebase from "firebase";
+import firebase from "firebase/app";
 
 Vue.config.productionTip = false;
 
@@ -30,13 +30,15 @@ Vue.prototype.$http = axios;
 let app = "";
 
 const firebaseConfig = {
-  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
-  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.VUE_APP_FIREBASE_APP_ID,
-  measurementId: process.env.VUE_APP_FIREBASE_MEASURMENT_ID,
+  apiKey: "AIzaSyD88ucXoxhnfm3iNUA-FJ-zg-0GrJKT-Zo",
+  authDomain: "crawlerx-b2ad1.firebaseapp.com",
+  databaseURL: "https://crawlerx-b2ad1.firebaseio.com",
+  projectId: "crawlerx-b2ad1",
+  storageBucket: "crawlerx-b2ad1.appspot.com",
+  messagingSenderId: "811171439353",
+  appId: "1:811171439353:web:64e84b4fc347a5c37eb828",
+  measurementId: "G-CM2MX0CRRC",
+
 };
 
 firebase.initializeApp(firebaseConfig);
